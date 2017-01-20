@@ -26,7 +26,7 @@ export default class PeopleContainer extends Component {
 		return (
 			<div>
 				<h2>people container</h2>
-				{this.state.people.map((p) => (<div>{p.name}</div>))}
+				{this.state.people.map((p) => (<div key={p.name}>{p.name}</div>))}
 			</div>
 		);
 	}
