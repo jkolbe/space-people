@@ -8,12 +8,15 @@ a {
 	&, &:link, &:visited, &:hover, &:active {text-decoration: none;}
 }
 
-.main {
+.section {
 	background-color: #eee;
 	padding-top: 50px;
 	height: 100vh;
-	background: url(./../images/clouds-2.jpg) fixed 0 0/cover #A2A3A7;
+	&.main {
+		background: url(./../images/clouds-2.jpg) fixed 0 0/cover #A2A3A7;
+	}
 }
+
 
 .tile {
 	background-color: #00688B;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Router, Route, browserHistory } from 'react-router';
 
-
 import Navigation from './components/navigation';
 import HomeCont from './containers/home-container';
 import PeopleCont from './containers/people-container';

@@ -1,6 +1,6 @@
 # Space People
 
-List of APIs
-https://github.com/toddmotto/public-apis
+Open-Notify-API
+http://open-notify.org/Open-Notify-API/People-In-Space/
 
 

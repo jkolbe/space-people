@@ -15,19 +15,40 @@ export default class PeopleContainer extends Component {
 
 	componentDidMount() {
 		$.get('http://api.open-notify.org/astros.json').then(
-			(res) => {
-				this.setState({people:res.people, number:res.number})
-				console.log(this.state);
-			}
+			(res) => { this.setState({people:res.people, number:res.number}) }
 		);
 	}
 
 	render() {
 		return (
-			<div>
-				<h2>people container</h2>
-				{this.state.people.map((p) => (<div key={p.name}>{p.name}</div>))}
+			<div className="section">
+				<div className="container">
+	         		<div className="row">
+	            		<div className="col-xs-12">
+	            			<h2>people container</h2>
+	            			<People people={this.state.people} />
+
+							{
+							//	this.state.people.map((p, i) => (<div key={i}>{p.name} {p.craft}</div>))
+							}
+	            		</div>
+	            	</div>
+	            </div>
 			</div>
 		);
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 export default class HomeContainer extends Component {
 	render() {
 		return (
-			<div className="main">
+			<div className="section main">
 				<div className="container">
 	         		<div className="row">
 	            		<div className="col-xs-12">
