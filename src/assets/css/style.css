@@ -1,0 +1,50 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+.main {
+  background-color: #eee;
+  padding-top: 50px;
+  height: 100vh;
+  background: url(./../images/clouds-2.jpg) fixed 0 0/cover #A2A3A7;
+}
+
+.tile {
+  background-color: #00688B;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.tile a {
+  color: #fff;
+}
+
+.navbar-header li {
+  list-style: none;
+}
+
+.navbar-header li a {
+  color: #777;
+}
+
+.navbar-header li a:hover, .navbar-header li a:active {
+  text-decoration: none;
+}

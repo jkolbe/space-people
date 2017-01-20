@@ -4,13 +4,12 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 const Navigation = (props) => (
 	<div>
-		<Navbar  collapseOnSelect>
+		<Navbar  collapseOnSelect fixedTop>
 			<Navbar.Header>
 				<Navbar.Brand>
 					<LinkContainer to="/">
 						<NavItem eventKey={1}>Space People</NavItem>
 					</LinkContainer>
-
 				</Navbar.Brand>
 				<Navbar.Toggle />
 			</Navbar.Header>
