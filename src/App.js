@@ -1,30 +1,18 @@
-import React, { Component } from 'react';
-import $ from 'jquery';
+import React from 'react';
+import { Router, Route, browserHistory } from 'react-router';
 
-class App extends Component {
+import HomeCont from './containers/home-container';
+import PeopleCont from './containers/people-container';
 
+const App = () => (
+  <div>
+    <Router history={browserHistory}>
+      <Route path='/' component={HomeCont} />
+      <Route path='/people' component={PeopleCont} />
+    </Router>
 
-  componentDidMount() {
-    console.log('hi!');
-    // $.ajax({
-    //   url: 'https://lcboapi.com/stores',
-    //   dataType: 'jsonp',
-    //   headers: { 'Authorization': 'MDo2NWI0NTY4Yy1kZjEzLTExZTYtOTk3Zi1hN2E3NTQ5NzNlMzY6M0FZV1NWRWNOa1VsNU5jalJ2eURuUHBwbzBxWlNHOWxGalhC' }
-    // }).then((res)=>{console.log(res)});
-
-    $.get('http://api.open-notify.org/astros.json').then(function(data) {
-      console.log(data);
-    });
-
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <h1>hello</h1>
-      </div>
-    );
-  }
-}
+  </div>
+);
 
 export default App;
+
