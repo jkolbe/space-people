@@ -60,6 +60,15 @@ a {
 	}
 }
 
+.location-form {
+	margin-top: 50px;
+	.form-group {
+		display:block;
+		margin-bottom: 10px;
+		label {min-width: 100px;}
+	}
+}
+
 .navbar-header li {
 	list-style: none;
 	a {

@@ -88,6 +88,19 @@ a, a:link, a:visited, a:hover, a:active {
   margin-bottom: 0;
 }
 
+.location-form {
+  margin-top: 50px;
+}
+
+.location-form .form-group {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.location-form .form-group label {
+  min-width: 100px;
+}
+
 .navbar-header li {
   list-style: none;
 }
