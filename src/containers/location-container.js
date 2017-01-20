@@ -10,12 +10,19 @@ export default class LocationContainer extends Component {
 	}
 
 	componentDidMount() {
+		//https://www.google.ca/maps/place/41.40338, 2.17403.
 	}
 
 	render() {
 		return (
-			<div>
-				<h2>Location container</h2>
+			<div className="section">
+				<div className="container">
+	         		<div className="row">
+	            		<div className="col-xs-12">
+	            			<h2>Location container</h2>
+						</div>
+					</div>
+				</div>
 			</div>
 		);
 	}

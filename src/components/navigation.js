@@ -15,8 +15,8 @@ const Navigation = (props) => (
 			</Navbar.Header>
 			<Navbar.Collapse>
 				<Nav pullRight>
-					<LinkContainer to="/people">
-						<NavItem eventKey={1}>People</NavItem>
+					<LinkContainer to="/craft">
+						<NavItem eventKey={1}>Craft</NavItem>
 					</LinkContainer>
 					<LinkContainer to="/location">
 						<NavItem eventKey={2}>Location</NavItem>

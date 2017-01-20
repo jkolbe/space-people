@@ -14,7 +14,7 @@ export default class HomeContainer extends Component {
 						</div>
 						<div className="col-xs-12 col-sm-6">
 							<div className="tile">
-								<Link to='/people'>People</Link>
+								<Link to='/craft'>Craft</Link>
 							</div>
 						</div>
 						<div className="col-xs-12 col-sm-6">

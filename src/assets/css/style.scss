@@ -10,13 +10,19 @@ a {
 
 .section {
 	background-color: #eee;
-	padding-top: 50px;
-	height: 100vh;
+	padding-top: 60px;
+	padding-bottom: 30px;
+	min-height: 100vh;
 	&.main {
 		background: url(./../images/clouds-2.jpg) fixed 0 0/cover #A2A3A7;
 	}
 }
 
+.favorite {
+	border: 1px solid black;
+	padding: 2px;
+	font-weight: 200;
+}
 
 .tile {
 	background-color: #00688B;
@@ -25,6 +31,33 @@ a {
 	border-radius: 5px;
 	text-transform: uppercase;
 	a {color: #fff;}
+}
+
+.crafts {margin-top: 30px;}
+.craf {
+	margin-bottom: 30px;
+	.craf-name {
+		background-color: #fff;
+		padding: 5px 10px;
+		border: 1px solid #ddd;
+		border-radius: 15px 15px 0px  0px;
+		img, span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		img { max-width: 50px; margin-right: 15px; }
+	}
+	.craft-crew {
+		background-color: #fff;
+		border: 1px solid #ddd;
+		border-top:0;
+		padding: 15px;
+		.craft-crew-person {
+			margin-bottom: 10px;
+			cursor: pointer;
+			&:last-child {margin-bottom:0;}
+		}
+	}
 }
 
 .navbar-header li {
