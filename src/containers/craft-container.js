@@ -27,7 +27,7 @@ export default class CraftContainer extends Component {
 	}
 
 	componentDidMount() {
-		$.get('http://api.open-notify.org/astros.json').then(
+		$.get('//api.open-notify.org/astros.json').then(
 			(res) => { 
 				this.setState({
 					people:res.people, 
