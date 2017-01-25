@@ -11,13 +11,12 @@ export default class LocationContainer extends Component {
 			latitude: "",
 			longitude: "",
 			timestamp: 0,
-			user: {
-				latitude: 43.6691721,
-				longitude: -79.3796620
-			},
-			passtimes: []	
+			passtimes: [],
+			userlatitude : 43.6691721,
+			userlongitude: -79.3796620
 		};
 		this.getISSlocation = this.getISSlocation.bind(this);
+		this.handleChange = this.handleChange.bind(this);
 	}
 
 	getDateFromTimestamp(timestamp) {
@@ -25,13 +24,22 @@ export default class LocationContainer extends Component {
 		return `Date: ${d.getMonth()+1}/${d.getDate()}/${d.getFullYear()}   Time: ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()} UTC`;
 	}
 
-	getISSlocation(p){
-		$.get(`//api.open-notify.org/iss-pass.json?lat=${p.latitude}&lon=${p.longitude}`).then(
+	getISSlocation(event){
+		event.preventDefault();
+		$.get(`//api.open-notify.org/iss-pass.json?lat=${this.state.userlatitude}&lon=${this.state.userlongitude}`).then(
 			(res) => {
 				this.setState({passtimes:res.response});
 			}
 		);
 	}
+
+	handleChange(event) {
+		const target = event.target;
+    	const value = target.type === 'checkbox' ? target.checked : target.value;
+    	const name = target.name;
+    	this.setState({[name]: value});
+  	}
+
 
 	componentDidMount() {
 		$.get('//api.open-notify.org/iss-now.json').then(
@@ -62,7 +70,7 @@ export default class LocationContainer extends Component {
 					</div>
 					<div className="row">
 						<div className="col-xs-12">
-							<Form submit={this.getISSlocation} user={this.state.user}/>
+							<Form submit={this.getISSlocation} lat={this.state.userlatitude} log={this.state.userlongitude} change={this.handleChange} />
 							<ul className="passtimes">
 								{this.state.passtimes.map((t,index) => <li key={index}>{this.getDateFromTimestamp(t.risetime)}</li>)}
 							</ul>
