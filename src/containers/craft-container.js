@@ -18,8 +18,8 @@ export default class CraftContainer extends Component {
 		this.selectFavoriteSpacePerson = this.selectFavoriteSpacePerson.bind(this);	
 	}
 
-	getDistintCrafts(array, key) {
-		return [...new Set(array.map(item => item[key]))];
+	getDistintCrafts(listOfCrafts, key) {
+		return [...(new Set(listOfCrafts.map(item => item[key])))];
 	}
 
 	selectFavoriteSpacePerson(person) {
